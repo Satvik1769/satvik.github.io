@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Satvik Manchanda — Backend Software Engineer portfolio">
+  <title>Satvik Manchanda — Backend Engineer</title>
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --card: #12161b;
+      --text: #f3f5f7;
+      --muted: #9ba4ae;
+      --line: #252b33;
+      --accent: #8ab4ff;
+      --max: 920px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(calc(100% - 40px), var(--max)); margin: auto; }
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(11,13,16,.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    nav .wrap {
+      height: 64px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .brand { font-weight: 700; letter-spacing: -.02em; }
+    .links { display: flex; gap: 24px; color: var(--muted); font-size: 14px; }
+    .links a:hover { color: var(--text); }
+    .hero { padding: 110px 0 85px; }
+    .eyebrow { color: var(--accent); font-size: 14px; font-weight: 600; }
+    h1 {
+      font-size: clamp(44px, 8vw, 76px);
+      line-height: 1.02; letter-spacing: -.055em;
+      margin: 14px 0 24px; max-width: 780px;
+    }
+    .intro { color: var(--muted); font-size: 20px; max-width: 700px; }
+    .actions { display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap; }
+    .button {
+      border: 1px solid var(--line); padding: 10px 16px; border-radius: 8px;
+      font-size: 14px; background: var(--card);
+    }
+    .button.primary { background: var(--text); color: var(--bg); border-color: var(--text); }
+    section { padding: 72px 0; border-top: 1px solid var(--line); }
+    .section-title { font-size: 14px; color: var(--accent); margin-bottom: 28px; font-weight: 600; }
+    h2 { font-size: 30px; letter-spacing: -.03em; margin: 0 0 18px; }
+    p { margin: 0 0 16px; }
+    .muted { color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .card {
+      background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+      padding: 24px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 19px; }
+    .meta { color: var(--muted); font-size: 13px; margin-bottom: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
+    .tag {
+      border: 1px solid var(--line); color: var(--muted);
+      padding: 4px 9px; border-radius: 999px; font-size: 12px;
+    }
+    .experience { display: grid; gap: 28px; }
+    .role { display: grid; grid-template-columns: 150px 1fr; gap: 28px; }
+    .date { color: var(--muted); font-size: 14px; }
+    ul { padding-left: 20px; color: var(--muted); }
+    li { margin: 8px 0; }
+    .contact { display: flex; gap: 14px; flex-wrap: wrap; }
+    footer { padding: 30px 0 50px; color: var(--muted); font-size: 13px; }
+    @media (max-width: 680px) {
+      .wrap { width: min(calc(100% - 28px), var(--max)); }
+      .links { display: none; }
+      .hero { padding: 75px 0 60px; }
+      .grid { grid-template-columns: 1fr; }
+      .role { grid-template-columns: 1fr; gap: 5px; }
+      section { padding: 55px 0; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="#">Satvik Manchanda</a>
+      <div class="links">
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="wrap hero">
+      <div class="eyebrow">Backend Software Engineer</div>
+      <h1>Building reliable backend systems and developer-focused products.</h1>
+      <p class="intro">
+        I'm Satvik, a backend engineer who likes building systems that are a little more interesting than CRUD.
+        I work mostly with Java, Spring Boot and PostgreSQL, and I enjoy digging into APIs, distributed systems,
+        performance problems and the details that make software reliable in production.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/Satvik1769" target="_blank">GitHub</a>
+        <a class="button" href="https://www.linkedin.com/in/satvikmanchanda/" target="_blank">LinkedIn</a>
+      </div>
+    </header>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="section-title">EXPERIENCE</div>
+        <div class="experience">
+          <div class="role">
+            <div class="date">2025 — Present</div>
+            <div>
+              <h2>Backend Software Engineer · Univest</h2>
+              <p class="muted">Building backend systems and integrations for financial products, with a focus on APIs,
+              reliability, data and production workflows.</p>
+              <ul>
+                <li>Built and maintained Java/Spring Boot APIs and production backend services used across financial workflows.</li>
+                <li>Worked on payment infrastructure covering sessions, mandates, refunds, webhooks, invoices and bank-outage handling.</li>
+                <li>Integrated external KYC, account aggregation, payment and financial infrastructure APIs.</li>
+                <li>Designed PostgreSQL queries, indexes and data models, including performance-sensitive search and trading workflows.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-title">PROJECTS</div>
+        <div class="grid">
+          <article class="card">
+            <h3>sonicLens</h3>
+            <div class="meta">Audio recognition · Search · Performance</div>
+            <p class="muted">
+              A self-hosted audio fingerprinting system inspired by Shazam. It handled a catalog of
+              1,000 songs with 50M+ fingerprints and recognized a 30-second clip in about 800ms.
+            </p>
+            <div class="tags">
+              <span class="tag">Audio Fingerprinting</span>
+              <span class="tag">Search</span>
+              <span class="tag">Performance</span>
+            </div>
+            <div class="actions">
+              <a class="button" href="https://github.com/Satvik1769/sonicLens" target="_blank">GitHub →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>opsHARE</h3>
+            <div class="meta">File sharing · Networking · Backend</div>
+            <p class="muted">
+              A project focused on building a practical file-sharing system and understanding the
+              backend and networking problems behind moving data between peers.
+            </p>
+            <div class="tags">
+              <span class="tag">Go</span>
+              <span class="tag">Networking</span>
+              <span class="tag">P2P</span>
+            </div>
+            <div class="actions">
+              <a class="button" href="https://github.com/Satvik1769/opsHARE" target="_blank">GitHub →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Backend experiments</h3>
+            <div class="meta">Systems · APIs · Engineering</div>
+            <p class="muted">
+              A collection of smaller projects and experiments where I explore backend concepts,
+              APIs, databases, concurrency, networking and system design.
+            </p>
+            <div class="tags">
+              <span class="tag">Java</span>
+              <span class="tag">Go</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">APIs</span>
+            </div>
+            <div class="actions">
+              <a class="button" href="https://github.com/Satvik1769?tab=repositories" target="_blank">More projects →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>What I like building</h3>
+            <div class="meta">Curiosity → prototype → production</div>
+            <p class="muted">
+              I enjoy projects where the interesting part is underneath the surface:
+              search and indexing, low-latency APIs, distributed workflows, integrations,
+              and systems where failure handling actually matters.
+            </p>
+            <div class="tags">
+              <span class="tag">Distributed Systems</span>
+              <span class="tag">Low Latency</span>
+              <span class="tag">System Design</span>
+            </div>
+          </article>
+        </div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-title">TECHNOLOGY</div>
+        <h2>Tools I work with</h2>
+        <p class="muted">
+          Java · Spring Boot · PostgreSQL · JPA/Hibernate · JDBC · Kafka · Redis · Docker ·
+          REST APIs · Gradle · Git · GCP
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-title">CONTACT</div>
+        <h2>Let's build something useful.</h2>
+        <p class="muted">For engineering opportunities, projects or interesting backend problems.</p>
+        <div class="actions contact">
+          <a class="button primary" href="mailto:satvikmanchanda@gmail.com">Email me</a>
+          <a class="button" href="https://github.com/Satvik1769" target="_blank">GitHub</a>
+          <a class="button" href="https://www.linkedin.com/in/satvikmanchanda/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Satvik Manchanda</div>
+  </footer>
+</body>
+</html>
